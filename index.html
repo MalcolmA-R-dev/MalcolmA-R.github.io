@@ -3,109 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malcolm Albergo-Radisch | GCSP Portfolio</title>
+    <title>Malcolm Albergo-Radisch | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <nav class="sidebar">
-            <div class="profile-header">
-                <h1>Malcolm A-R</h1>
-                <p>Biomedical Engineering</p>
-                <p class="gpa">GPA: 3.337</p>
-            </div>
-            <ul>
-                <li><a href="#home" class="active">Home (Bio)</a></li>
-                <li><a href="#talent">Talent</a></li>
-                <li><a href="#interdisciplinary">Interdisciplinary</a></li>
-                <li><a href="#entrepreneurship">Entrepreneurship</a></li>
-                <li><a href="#multicultural">Multicultural</a></li>
-                <li><a href="#social">Social Consciousness</a></li>
-            </ul>
-            <div class="sidebar-footer">
-                <p>NC State University</p>
-                <p>Grand Challenges Scholar</p>
-            </div>
-        </nav>
-
-        <main class="content">
+    <nav class="sidebar">
+        <div class="profile-header">
+            <h1>Malcolm A-R</h1>
+            <p>Biomedical Engineering</p>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
             
-            <section id="home" class="section">
-                <h2 class="page-header">Grand Challenge: Engineering Better Medicines</h2>
-                <div class="header-line"></div>
-                <div class="bio-card">
-                    <p>I am a Biomedical Engineering student at NC State University focusing on the Health theme of the Grand Challenges. Under the guidance of faculty advisor Ahmed Ali and mentor Dr. Qaqish, I am exploring intervertebral disc morphogenesis and lung fibrosis[cite: 4, 5, 6].</p>
-                    <div class="contact-info">
-                        <p><strong>Email:</strong> [Your Email Here]</p>
-                        <p><strong>Faculty Advisor:</strong> Ahmed Ali [cite: 4]</p>
+            <li class="dropdown">
+                <button class="dropbtn">Timeline Highlights ▼</button>
+                <div class="dropdown-content">
+                    <a href="#freshman">Freshman (2023-24)</a>
+                    <a href="#sophomore">Sophomore (2024-25)</a>
+                    <a href="#junior">Junior (2025-26)</a>
+                    <a href="#senior">Senior (Projected)</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <button class="dropbtn">GCSP Components ▼</button>
+                <div class="dropdown-content">
+                    <a href="#talent">Talent</a>
+                    <a href="#interdisciplinary">Interdisciplinary</a>
+                    <a href="#entrepreneurship">Entrepreneurship</a>
+                    <a href="#multicultural">Multicultural</a>
+                    <a href="#social">Social Consciousness</a>
+                </div>
+            </li>
+
+            <li><a href="#press">Press</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="linkedin-link">LinkedIn Profile</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <section id="home" class="section">
+            <blockquote class="hero-quote">
+                "Engineering better medicines to bridge the gap in global health."
+            </blockquote>
+            <div class="bio-box">
+                <img src="headshot.jpg" alt="Profile" class="profile-img">
+                <div class="bio-text">
+                    <p>I am a Biomedical Engineering major at NC State University[cite: 1, 2]. My focus is on Engineering Better Medicines under the Grand Challenges Scholars Program[cite: 3].</p>
+                    <div class="doc-links">
+                        <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
+                        <a href="cv.pdf" target="_blank" class="btn">View CV</a>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="talent" class="section">
-                <h3>Talent (Research & Competency)</h3>
-                <div class="experience-group">
-                    <h4>In-Depth Experiences</h4>
-                    <ul>
-                        <li><strong>Undergraduate Research Fellow (Summer 2025):</strong> Piedrahita Lab focusing on Intervertebral disc morphogenesis[cite: 6].</li>
-                        <li><strong>Senior Thesis:</strong> Plan to complete HON498/499 and BME491/492[cite: 6].</li>
-                    </ul>
-                    <h4>Further Engagement</h4>
-                    <ul>
-                        <li>Grand Challenges REU (2026): Piedrahita Lab, Lung Fibrosis and LGR5 placement[cite: 6].</li>
-                        <li>Presented at NSF Mentoring Catalyst Workshop[cite: 6].</li>
-                    </ul>
-                </div>
-            </section>
+        <section id="talent" class="section">
+            <h2 class="section-title">GCSP: Talent</h2>
+            <div class="card">
+                <h3>Undergraduate Research Fellow</h3>
+                <p>Piedrahita Lab (Summer 2025) - Focusing on Intervertebral disc morphogenesis.</p>
+                <p>Grand Challenges REU (2026) - Lung Fibrosis research.</p>
+            </div>
+        </section>
 
-            <section id="interdisciplinary" class="section">
-                <h3>Interdisciplinary Curriculum</h3>
-                <div class="experience-group">
-                    <ul>
-                        <li><strong>University Honors Program:</strong> Ongoing completion[cite: 6].</li>
-                        <li><strong>Carolina Diplomacy Fellows:</strong> Program at UNC[cite: 6].</li>
-                        <li><strong>Minor:</strong> Teamwork in Interdisciplinary Biomedical Research[cite: 6].</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="entrepreneurship" class="section">
-                <h3>Entrepreneurship</h3>
-                <div class="experience-group">
-                    <ul>
-                        <li><strong>Village Mentor:</strong> Albright Entrepreneurship Village (AEV)[cite: 6].</li>
-                        <li><strong>VenturePack Challenge 2025:</strong> Finalist competitor[cite: 6].</li>
-                        <li><strong>Awarded:</strong> IE Department Force Multiplier 2025[cite: 6].</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="multicultural" class="section">
-                <h3>Multicultural Competency</h3>
-                <div class="experience-group">
-                    <ul>
-                        <li><strong>Study Abroad (Barranquilla, Colombia):</strong> Engineering Economics course, Summer 2024[cite: 6].</li>
-                        <li><strong>GCSP Annual Meeting 2026:</strong> Attending in Rome, Italy[cite: 6].</li>
-                        <li><strong>Developing Cultural Competence Certificate</strong>[cite: 6].</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="social" class="section">
-                <h3>Social Consciousness</h3>
-                <div class="experience-group">
-                    <ul>
-                        <li><strong>Museum of Life and Science:</strong> 3 years in the Education Department (Non-profit)[cite: 6].</li>
-                        <li><strong>Social Innovation Fellows:</strong> Alternative service break project[cite: 6].</li>
-                        <li><strong>Advocacy:</strong> Led the second Durham No Kings Protest as a challenged voter[cite: 6].</li>
-                    </ul>
-                </div>
-            </section>
-
-        </main>
-    </div>
+        <section id="press" class="section">
+            <h2 class="section-title">Press & Publications</h2>
+            <div class="card">
+                <a href="LINK_HERE" target="_blank">View Article: [Title of Article]</a>
+                <p>Published in [Source Name], 2025.</p>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
