@@ -1,135 +1,93 @@
-:root {
-    --ncstate-red: #cc0000;
-    --sidebar-bg: #1a1a1a;
-    --text-main: #333;
-    --accent-blue: #4285f4;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
-    color: var(--text-main);
-}
-
-.container {
-    display: flex;
-}
-
-/* Sidebar Styling */
-.sidebar {
-    width: 280px;
-    background-color: var(--sidebar-bg);
-    color: white;
-    padding: 40px 20px;
-    position: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-header h1 {
-    font-size: 1.2rem;
-    color: var(--ncstate-red);
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.gpa {
-    font-size: 0.8rem;
-    opacity: 0.7;
-    margin-bottom: 30px;
-}
-
-.sidebar ul {
+/* Sidebar & Dropdown Logic */
+.nav-links {
     list-style: none;
-    flex-grow: 1;
+    margin-top: 30px;
 }
 
-.sidebar li {
-    margin-bottom: 20px;
+.nav-links li {
+    padding: 10px 0;
 }
 
-.sidebar a {
+.dropbtn {
+    background: none;
+    border: none;
     color: #bbb;
-    text-decoration: none;
+    font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.sidebar a:hover, .sidebar a.active {
-    color: white;
-    padding-left: 5px;
-    border-left: 3px solid var(--ncstate-red);
-}
-
-.sidebar-footer {
-    font-size: 0.7rem;
-    opacity: 0.5;
-}
-
-/* Content Styling */
-.content {
-    margin-left: 280px;
-    padding: 60px 10%;
+    cursor: pointer;
+    text-align: left;
     width: 100%;
+    padding: 5px 0;
 }
 
-.page-header {
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin-bottom: 10px;
+.dropdown-content {
+    display: none;
+    background-color: #2a2a2a;
+    padding-left: 15px;
+    margin-top: 5px;
+    border-radius: 4px;
 }
 
-.header-line {
-    width: 100px;
-    height: 4px;
-    background-color: var(--ncstate-red);
+.dropdown-content a {
+    display: block;
+    padding: 8px 0;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: white;
+}
+
+/* Quote Styling */
+.hero-quote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid #cc0000;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+/* Profile Section */
+.bio-box {
+    display: flex;
+    gap: 30px;
+    align-items: center;
     margin-bottom: 50px;
 }
 
-.section {
-    margin-bottom: 60px;
-    scroll-margin-top: 60px;
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.section h3 {
-    font-size: 1.5rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.doc-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
 }
 
-.experience-group h4 {
-    color: var(--ncstate-red);
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #cc0000;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* Footer Link */
+.linkedin-link {
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: bold;
     font-size: 0.9rem;
-    margin-top: 15px;
-    text-transform: uppercase;
-}
-
-.experience-group ul {
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.experience-group li {
-    margin-bottom: 10px;
-}
-
-.bio-card {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 5px solid #ddd;
-}
-
-@media (max-width: 768px) {
-    .container { flex-direction: column; }
-    .sidebar { width: 100%; height: auto; position: relative; }
-    .content { margin-left: 0; padding: 30px; }
 }
