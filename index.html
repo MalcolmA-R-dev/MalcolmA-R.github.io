@@ -3,21 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My College Portfolio</title>
+    <title>Malcolm | Academic Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>[Your Name]</h1>
-        <p>Aspiring [Your Target Career]</p>
+
+    <nav>
+        <div class="nav-container">
+            <span class="logo">MA-R</span>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Malcolm [Your Last Name]</h1>
+            <p class="subtitle">Scholastic Achievements & Collegiate Projects</p>
+            <a href="#achievements" class="btn">View My Work</a>
+        </div>
     </header>
 
-    <section id="achievements">
-        <h2>Key Achievements</h2>
-        <div class="card">
-            <h3>Dean's List - Fall 2025</h3>
-            <p>Maintained a 3.9 GPA while balancing a teaching assistant role.</p>
-        </div>
+    <main>
+        <section id="achievements">
+            <h2 class="section-title">Academic Milestones</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="badge">Honor</span>
+                    <h3>Dean's List</h3>
+                    <p>Recognized for maintaining a 3.8+ GPA during the Fall 2025 and Spring 2026 semesters.</p>
+                </div>
+
+                <div class="card">
+                    <span class="badge">Project</span>
+                    <h3>Senior Thesis / Key Project</h3>
+                    <p>A deep dive into [Subject Name]. Developed a framework for [Result of project].</p>
+                </div>
+
+                <div class="card">
+                    <span class="badge">Leadership</span>
+                    <h3>Organization President</h3>
+                    <p>Led a team of 15 students in the [Club Name] to organize campus-wide events.</p>
+                </div>
+            </div>
         </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Malcolm A-R. Hand-coded with HTML & CSS.</p>
+    </footer>
+
 </body>
 </html>
