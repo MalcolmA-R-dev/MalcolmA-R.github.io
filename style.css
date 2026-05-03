@@ -62,6 +62,33 @@ body {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+.pdf-container {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.pdf-container p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--ncstate-red);
+}
+
+.pdf-fallback {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Make sure the PDF window is responsive on mobile */
+@media (max-width: 600px) {
+    embed {
+        height: 400px;
+    }
+}
 
 /* Sections & Cards */
 .hero-quote { font-size: 1.8rem; font-style: italic; border-left: 5px solid var(--ncstate-red); padding-left: 20px; margin-bottom: 40px; }
