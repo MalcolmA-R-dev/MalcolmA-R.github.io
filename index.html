@@ -9,14 +9,16 @@
 </head>
 <body>
 
-    <nav class="topbar">
+<nav class="topbar">
         <div class="nav-container">
             <div class="logo">
                 <span class="name">Malcolm A-R</span>
                 <span class="major">Biomedical Engineering</span>
             </div>
             
-            <ul class="nav-links">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            
+            <ul class="nav-links" id="navLinks">
                 <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
                 
                 <li class="dropdown">
@@ -44,7 +46,6 @@
             </ul>
         </div>
     </nav>
-
     <main class="content">
         <section id="home" class="page-section active">
             <blockquote class="hero-quote">
@@ -184,7 +185,12 @@
 
         </main>
 
-    <script>
+<script>
+        // NEW: Toggles the mobile menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('show');
+        }
+
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.page-section');
             sections.forEach(section => section.classList.remove('active'));
@@ -194,6 +200,9 @@
                 activeSection.classList.add('active');
                 window.scrollTo(0, 0); // Scroll to top when "changing pages"
             }
+
+            // NEW: Close the mobile menu after clicking a link
+            document.getElementById('navLinks').classList.remove('show');
         }
     </script>
 </body>
