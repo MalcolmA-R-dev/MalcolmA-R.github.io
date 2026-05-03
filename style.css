@@ -1,55 +1,74 @@
 :root {
     --ncstate-red: #cc0000;
-    --sidebar-bg: #1a1a1a;
-    --text-color: #333;
+    --dark: #1a1a1a;
+    --light-grey: #f4f4f4;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    display: flex;
     margin: 0;
+    padding-top: 80px; /* Space for the fixed topbar */
+    color: #333;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 280px;
-    background: var(--sidebar-bg);
+/* Topbar Styling */
+.topbar {
+    background: var(--dark);
     color: white;
-    height: 100vh;
     position: fixed;
-    padding: 40px 20px;
-}
-
-.profile-header h1 { font-size: 1.2rem; color: var(--ncstate-red); margin-bottom: 5px; }
-.gpa-tag { font-size: 0.8rem; opacity: 0.6; margin-bottom: 30px; }
-
-/* Navigation */
-.nav-links { list-style: none; padding: 0; }
-.nav-links li { margin-bottom: 15px; }
-.nav-links a, .dropbtn {
-    color: #bbb;
-    text-decoration: none;
-    font-size: 0.9rem;
-    background: none;
-    border: none;
-    cursor: pointer;
+    top: 0;
     width: 100%;
-    text-align: left;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-.nav-links a:hover, .dropbtn:hover { color: white; }
 
-/* Dropdown */
-.dropdown-content { display: none; padding-left: 15px; margin-top: 10px; }
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo .name { font-weight: 700; font-size: 1.2rem; display: block; color: var(--ncstate-red); }
+.logo .major { font-size: 0.75rem; opacity: 0.7; }
+
+.nav-links { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
+.nav-links a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+.nav-links a:hover { color: white; }
+
+/* Dropdown Menu */
+.dropdown { position: relative; }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--dark);
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    border-top: 2px solid var(--ncstate-red);
+}
+.dropdown-content a { padding: 12px 15px; display: block; font-size: 0.8rem; }
+.dropdown-content a:hover { background: #2a2a2a; }
 .dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a { font-size: 0.8rem; padding: 5px 0; display: block; }
 
-/* Content Hiding Logic */
-.content { margin-left: 280px; padding: 80px; width: 100%; }
-.page-section { display: none; } /* Hide everything by default */
-.page-section.active { display: block; } /* Show only the active one */
+/* Content Hiding */
+.content { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+.page-section { display: none; animation: fadeIn 0.4s ease; }
+.page-section.active { display: block; }
 
-/* Visual Spicing */
-.hero-quote { font-size: 2rem; font-style: italic; border-left: 5px solid var(--ncstate-red); padding-left: 20px; margin-bottom: 40px; color: #444; }
-.card { background: #f9f9f9; padding: 25px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #eee; }
-.btn { background: var(--ncstate-red); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; margin-right: 10px; }
-.profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Sections & Cards */
+.hero-quote { font-size: 1.8rem; font-style: italic; border-left: 5px solid var(--ncstate-red); padding-left: 20px; margin-bottom: 40px; }
+.bio-grid { display: grid; grid-template-columns: 1fr 200px; gap: 40px; }
+.profile-img { width: 100%; border-radius: 8px; border: 1px solid #ddd; }
+.gpa-text { text-align: center; font-size: 0.8rem; margin-top: 10px; font-weight: bold; }
+.card { background: var(--light-grey); padding: 25px; border-radius: 8px; margin-bottom: 20px; }
+.btn { background: var(--ncstate-red); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 10px; }
+
+.footer-social { margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; }
