@@ -108,20 +108,31 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* 16:9 Aspect Ratio for YouTube (Horizontal) */
+/* 16:9 YouTube Container (Horizontal) */
 .video-container.youtube {
     padding-bottom: 56.25%; 
+    max-width: 800px; /* FIX: Stops the thumbnail from stretching and blurring on large screens */
+    margin: 0 auto;   /* Centers the video inside the card */
 }
 
-/* 9:16 Aspect Ratio for Instagram Reels (Vertical) */
-.video-container.instagram {
+/* If your YouTube video is actually a vertical SHORT, use this class instead in your HTML: class="video-container youtube-short" */
+.video-container.youtube-short {
     padding-bottom: 177.77%; 
-    max-width: 350px; /* Prevents it from being massively tall on computer screens */
-    margin: 15px auto; /* Centers it nicely */
+    max-width: 350px; 
+    margin: 0 auto; 
 }
 
-/* Forces the video to fill the responsive container */
-.video-container iframe {
+/* LinkedIn Container */
+.video-container.linkedin {
+    padding-bottom: 0; /* LinkedIn handles its own height */
+    max-width: 504px; /* The perfect native width for a LinkedIn post */
+    margin: 0 auto; 
+    background: transparent;
+    box-shadow: none; /* LinkedIn has its own border, so we remove ours */
+}
+
+.video-container.youtube iframe,
+.video-container.youtube-short iframe {
     position: absolute;
     top: 0;
     left: 0;
