@@ -241,11 +241,12 @@ body {
     text-transform: uppercase;
 }
 
-/* Make sure the embed fills its half of the card */
-.split-media embed {
+/* Global Media Image Class */
+.media-img {
     width: 100%;
-    height: 500px; /* You can make this taller if needed! */
     border-radius: 4px;
+    margin-bottom: 10px;
+    display: block;
 }
 
 /* Container for Landscape Poster (4:3 Ratio) */
@@ -259,16 +260,6 @@ body {
     border: 1px solid #eee;
 }
 
-.pdf-wrapper-landscape embed, 
-.pdf-wrapper-landscape iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
 /* Container for A1 Portrait Poster (1:1.41 Ratio) */
 .pdf-wrapper-portrait {
     position: relative;
@@ -280,6 +271,9 @@ body {
     border: 1px solid #eee;
 }
 
+/* Combined absolute positioning for all PDF wrappers */
+.pdf-wrapper-landscape embed, 
+.pdf-wrapper-landscape iframe,
 .pdf-wrapper-portrait embed, 
 .pdf-wrapper-portrait iframe {
     position: absolute;
@@ -288,8 +282,8 @@ body {
     width: 100%;
     height: 100%;
     border: none;
+    border-radius: 4px; /* Keeps the corners smooth inside the wrapper */
 }
-
 
 /* --- 4. MOBILE RESPONSIVENESS (MUST BE AT THE VERY BOTTOM!) --- */
 
@@ -342,6 +336,7 @@ body {
     .hero-quote {
         font-size: 1.4rem; /* Shrink quote slightly for mobile */
     }
+    
     /* Stack the news card on mobile */
     .news-card {
         flex-direction: column;
@@ -368,18 +363,13 @@ body {
         width: 100%; /* Ensures the PDF takes up the full width of the phone */
     }
 
-        .pdf-wrapper-landscape {
+    .pdf-wrapper-landscape {
         padding-top: 0;
         height: 300px; /* Gives it a solid presence on phones so it's not a tiny sliver */
     }
 
-      .pdf-wrapper-portrait {
+    .pdf-wrapper-portrait {
         padding-top: 0;
         height: 600px; /* Taller height so a vertical poster doesn't look tiny */
     }
-}
-
-@media (max-width: 600px) {
-    /* Fix PDF sizes for smaller phones */
-    embed { height: 400px; }
 }
