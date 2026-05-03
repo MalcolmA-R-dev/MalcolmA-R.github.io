@@ -3,48 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malcolm Albergo-Radisch | BME Portfolio</title>
+    <title>Malcolm Albergo-Radisch | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="sidebar">
-        <div class="profile-header">
-            <h1>Malcolm A-R</h1>
-            <p>Biomedical Engineering</p>
-            <p class="gpa-tag">GPA: 3.337</p>
-        </div>
-        
-        <ul class="nav-links">
-            <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+    <nav class="topbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="name">Malcolm A-R</span>
+                <span class="major">Biomedical Engineering</span>
+            </div>
             
-            <li class="dropdown">
-                <button class="dropbtn">Timeline Highlights ▼</button>
-                <div class="dropdown-content">
-                    <a href="javascript:void(0)" onclick="showSection('freshman')">Freshman (2023-24)</a>
-                    <a href="javascript:void(0)" onclick="showSection('sophomore')">Sophomore (2024-25)</a>
-                    <a href="javascript:void(0)" onclick="showSection('junior')">Junior (2025-26)</a>
-                    <a href="javascript:void(0)" onclick="showSection('senior')">Senior (Projected)</a>
-                </div>
-            </li>
+            <ul class="nav-links">
+                <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Timeline ▼</a>
+                    <div class="dropdown-content">
+                        <a href="javascript:void(0)" onclick="showSection('freshman')">Freshman</a>
+                        <a href="javascript:void(0)" onclick="showSection('sophomore')">Sophomore</a>
+                        <a href="javascript:void(0)" onclick="showSection('junior')">Junior</a>
+                        <a href="javascript:void(0)" onclick="showSection('senior')">Senior</a>
+                    </div>
+                </li>
 
-            <li class="dropdown">
-                <button class="dropbtn">GCSP Components ▼</button>
-                <div class="dropdown-content">
-                    <a href="javascript:void(0)" onclick="showSection('talent')">Talent</a>
-                    <a href="javascript:void(0)" onclick="showSection('interdisciplinary')">Interdisciplinary</a>
-                    <a href="javascript:void(0)" onclick="showSection('entrepreneurship')">Entrepreneurship</a>
-                    <a href="javascript:void(0)" onclick="showSection('multicultural')">Multicultural</a>
-                    <a href="javascript:void(0)" onclick="showSection('social')">Social Consciousness</a>
-                </div>
-            </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">GCSP Components ▼</a>
+                    <div class="dropdown-content">
+                        <a href="javascript:void(0)" onclick="showSection('talent')">Talent</a>
+                        <a href="javascript:void(0)" onclick="showSection('interdisciplinary')">Interdisciplinary</a>
+                        <a href="javascript:void(0)" onclick="showSection('entrepreneurship')">Entrepreneurship</a>
+                        <a href="javascript:void(0)" onclick="showSection('multicultural')">Multicultural</a>
+                        <a href="javascript:void(0)" onclick="showSection('social')">Social Consciousness</a>
+                    </div>
+                </li>
 
-            <li><a href="javascript:void(0)" onclick="showSection('press')">Press</a></li>
-        </ul>
-
-        <div class="sidebar-footer">
-            <a href="YOUR_LINKEDIN_URL" target="_blank" class="linkedin-link">LinkedIn Profile</a>
+                <li><a href="javascript:void(0)" onclick="showSection('press')">Press</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -53,15 +50,23 @@
             <blockquote class="hero-quote">
                 "Engineering better medicines to bridge the gap in global health." [cite: 3]
             </blockquote>
-            <div class="bio-box">
-                <img src="headshot.jpg" alt="Malcolm A-R" class="profile-img">
+            <div class="bio-grid">
                 <div class="bio-text">
-                    <p>I am a Biomedical Engineering major at NC State University[cite: 1, 2]. My focus is on the Grand Challenges Scholar Program (GCSP) health theme: <strong>Engineer Better Medicines</strong>[cite: 3].</p>
+                    <p>I am a Biomedical Engineering student at NC State University[cite: 1, 2]. My work focuses on the Grand Challenges Scholars Program (GCSP) health theme: <strong>Engineer Better Medicines</strong>[cite: 3, 8].</p>
+                    <p><strong>Faculty Advisor:</strong> Ahmed Ali [cite: 4] | <strong>Mentor:</strong> Dr. Qaqish [cite: 5]</p>
                     <div class="doc-links">
                         <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
                         <a href="cv.pdf" target="_blank" class="btn">View CV</a>
                     </div>
                 </div>
+                <div class="bio-image">
+                    <img src="headshot.jpg" alt="Malcolm A-R" class="profile-img">
+                    <p class="gpa-text">GPA: 3.337 [cite: 7]</p>
+                </div>
+            </div>
+            
+            <div class="footer-social">
+                <a href="YOUR_LINKEDIN_URL" target="_blank">LinkedIn Profile</a>
             </div>
         </section>
 
@@ -69,91 +74,26 @@
             <h2 class="section-title">GCSP: Talent</h2>
             <div class="card">
                 <h3>Undergraduate Research Fellow</h3>
-                <p>Piedrahita Lab (Summer 2025). Investigating Intervertebral disc morphogenesis.</p>
+                <p>Summer 2025: Piedrahita Lab focusing on Intervertebral disc morphogenesis.</p>
             </div>
             <div class="card">
                 <h3>Grand Challenges REU</h3>
-                <p>Spring and Summer 2026. Researching Lung Fibrosis and LGR5 placement at Piedrahita Lab.</p>
+                <p>Spring and Summer 2026: Piedrahita Lab researching Lung Fibrosis and LGR5 placement.</p>
             </div>
         </section>
 
-        <section id="interdisciplinary" class="page-section">
-            <h2 class="section-title">Interdisciplinary Curriculum</h2>
-            <div class="card">
-                <h3>University Honors Program</h3>
-                <p>Actively completing the University Honors Program requirements.</p>
-            </div>
-            <div class="card">
-                <h3>Minor in Teamwork</h3>
-                <p>Minor in Teamwork in Interdisciplinary Biomedical Research.</p>
-            </div>
-        </section>
-
-        <section id="entrepreneurship" class="page-section">
-            <h2 class="section-title">Entrepreneurship</h2>
-            <div class="card">
-                <h3>Albright Entrepreneurship Village (AEV)</h3>
-                <p>Serving as a Village Mentor and recipient of the Force Multiplier 2025 award.</p>
-            </div>
-            <div class="card">
-                <h3>VenturePack Challenge</h3>
-                <p>Finalist in the Spring 2025 VenturePack Challenge competition.</p>
-            </div>
-        </section>
-
-        <section id="multicultural" class="page-section">
-            <h2 class="section-title">Multicultural Competency</h2>
-            <div class="card">
-                <h3>International Education</h3>
-                <p>Study abroad in Barranquilla, Colombia (Summer 2024), focusing on Engineering Economics.</p>
-            </div>
-            <div class="card">
-                <h3>GCSP Annual Meeting</h3>
-                <p>Projected attendance at the 2026 Annual Meeting in Rome, Italy.</p>
-            </div>
-        </section>
-
-        <section id="social" class="page-section">
-            <h2 class="section-title">Social Consciousness</h2>
-            <div class="card">
-                <h3>Museum of Life and Science</h3>
-                <p>Dedicated three years to the education department of this Durham-based non-profit.</p>
-            </div>
-            <div class="card">
-                <h3>Social Innovation Fellows</h3>
-                <p>Participating in alternative service break projects and social innovation initiatives.</p>
-            </div>
-        </section>
-
-        <section id="press" class="page-section">
-            <h2 class="section-title">Press</h2>
-            <div class="card">
-                <p>Coming soon: Articles and publications highlighting research and advocacy work.</p>
-            </div>
-        </section>
-
-        <section id="freshman" class="page-section"><h2>Freshman Highlights</h2><p>Content for 2023-24 school year.</p></section>
-        <section id="sophomore" class="page-section"><h2>Sophomore Highlights</h2><p>Content for 2024-25 school year.</p></section>
-        <section id="junior" class="page-section"><h2>Junior Highlights</h2><p>Content for 2025-26 school year.</p></section>
-        <section id="senior" class="page-section"><h2>Senior Highlights</h2><p>Projected goals and senior thesis plan.</p></section>
-
-    </main>
+        </main>
 
     <script>
         function showSection(sectionId) {
-            // Hide all sections
             const sections = document.querySelectorAll('.page-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
+            sections.forEach(section => section.classList.remove('active'));
             
-            // Show the selected section
             const activeSection = document.getElementById(sectionId);
             if (activeSection) {
                 activeSection.classList.add('active');
+                window.scrollTo(0, 0); // Scroll to top when "changing pages"
             }
-
-            // Optional: Close dropdowns after clicking on mobile
         }
     </script>
 </body>
