@@ -195,6 +195,48 @@ body {
     color: #444;
     margin: 0;
 }
+
+/* --- SPLIT CARDS (Side-by-Side Layout) --- */
+.split-card {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Aligns text and media to the top */
+}
+
+.split-text {
+    flex: 1; /* Tells the text to take up exactly half the space */
+    padding-right: 20px;
+}
+
+.split-text h3 {
+    margin-top: 0;
+    color: var(--ncstate-red);
+}
+
+.split-media {
+    flex: 1; /* Tells the media to take up the other half */
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.media-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Make sure the embed fills its half of the card */
+.split-media embed {
+    width: 100%;
+    height: 500px; /* You can make this taller if needed! */
+    border-radius: 4px;
+}
+
 /* --- 4. MOBILE RESPONSIVENESS (MUST BE AT THE VERY BOTTOM!) --- */
 
 @media (max-width: 768px) {
@@ -256,6 +298,20 @@ body {
         height: 200px;
         border-right: none;
         border-bottom: 1px solid #eee;
+    }
+
+    /* Stack split cards on phones */
+    .split-card {
+        flex-direction: column;
+    }
+
+    .split-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .split-media {
+        width: 100%; /* Ensures the PDF takes up the full width of the phone */
     }
 }
 
