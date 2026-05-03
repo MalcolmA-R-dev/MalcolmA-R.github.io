@@ -237,6 +237,49 @@ body {
     border-radius: 4px;
 }
 
+/* Container for Landscape Poster (4:3 Ratio) */
+.pdf-wrapper-landscape {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* This creates the 4x3 landscape shape (3/4 = 75%) */
+    overflow: hidden;
+    border-radius: 4px;
+    background: #f0f0f0;
+    border: 1px solid #eee;
+}
+
+.pdf-wrapper-landscape embed, 
+.pdf-wrapper-landscape iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Container for A1 Portrait Poster (1:1.41 Ratio) */
+.pdf-wrapper-portrait {
+    position: relative;
+    width: 100%;
+    padding-top: 141.4%; /* The exact ratio for A-series paper */
+    overflow: hidden;
+    border-radius: 4px;
+    background: #f0f0f0;
+    border: 1px solid #eee;
+}
+
+.pdf-wrapper-portrait embed, 
+.pdf-wrapper-portrait iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
 /* --- 4. MOBILE RESPONSIVENESS (MUST BE AT THE VERY BOTTOM!) --- */
 
 @media (max-width: 768px) {
@@ -312,6 +355,16 @@ body {
 
     .split-media {
         width: 100%; /* Ensures the PDF takes up the full width of the phone */
+    }
+
+        .pdf-wrapper-landscape {
+        padding-top: 0;
+        height: 300px; /* Gives it a solid presence on phones so it's not a tiny sliver */
+    }
+
+      .pdf-wrapper-portrait {
+        padding-top: 0;
+        height: 600px; /* Taller height so a vertical poster doesn't look tiny */
     }
 }
 
