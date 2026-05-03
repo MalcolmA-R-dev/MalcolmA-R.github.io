@@ -12,9 +12,9 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    padding-top: 80px; /* Space for the fixed topbar */
+    padding-top: 80px;
     color: #333;
-    overflow-x: hidden; /* Prevents side-to-side scrolling */
+    overflow-x: hidden; 
 }
 
 /* --- 2. TOPBAR & NAVIGATION --- */
@@ -70,7 +70,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Hamburger Icon (Hidden on Desktop) */
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
@@ -91,7 +90,7 @@ body {
 /* Sections & Cards */
 .hero-quote { font-size: 1.8rem; font-style: italic; border-left: 5px solid var(--ncstate-red); padding-left: 20px; margin-bottom: 40px; }
 .bio-grid { display: grid; grid-template-columns: 1fr 200px; gap: 40px; }
-.profile-img { width: 100%; border-radius: 8px; border: 1px solid #ddd; object-fit: cover; }
+.profile-img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #ddd; object-fit: cover; }
 .gpa-text { text-align: center; font-size: 0.8rem; margin-top: 10px; font-weight: bold; }
 .card { background: var(--light-grey); padding: 25px; border-radius: 8px; margin-bottom: 20px; }
 .btn { background: var(--ncstate-red); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 10px; }
@@ -119,27 +118,24 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* 16:9 YouTube Container (Horizontal) */
 .video-container.youtube {
     padding-bottom: 56.25%; 
-    max-width: 800px; /* FIX: Stops the thumbnail from stretching and blurring on large screens */
-    margin: 0 auto;   /* Centers the video inside the card */
+    max-width: 800px; 
+    margin: 0 auto;   
 }
 
-/* If your YouTube video is actually a vertical SHORT, use this class instead in your HTML: class="video-container youtube-short" */
 .video-container.youtube-short {
     padding-bottom: 177.77%; 
     max-width: 350px; 
     margin: 0 auto; 
 }
 
-/* LinkedIn Container */
 .video-container.linkedin {
-    padding-bottom: 0; /* LinkedIn handles its own height */
-    max-width: 504px; /* The perfect native width for a LinkedIn post */
+    padding-bottom: 0; 
+    max-width: 504px; 
     margin: 0 auto; 
     background: transparent;
-    box-shadow: none; /* LinkedIn has its own border, so we remove ours */
+    box-shadow: none; 
 }
 
 .video-container.youtube iframe,
@@ -171,8 +167,9 @@ body {
 
 .news-img {
     width: 250px;
+    flex-shrink: 0; /* Prevents flexbox from squishing the image width */
     height: auto;
-    object-fit: cover; /* Keeps the image from stretching */
+    object-fit: cover; 
     border-right: 1px solid #eee;
 }
 
@@ -195,28 +192,20 @@ body {
     text-decoration: underline;
 }
 
-.news-meta {
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.news-snippet {
-    font-size: 0.9rem;
-    color: #444;
-    margin: 0;
-}
+.news-meta { font-size: 0.8rem; color: #666; margin-bottom: 10px; }
+.news-snippet { font-size: 0.9rem; color: #444; margin: 0; }
 
 /* --- SPLIT CARDS (Side-by-Side Layout) --- */
 .split-card {
     display: flex;
     gap: 30px;
-    align-items: flex-start; /* Aligns text and media to the top */
+    align-items: flex-start; 
 }
 
 .split-text {
-    flex: 2; /* Tells the text to take up exactly half the space */
+    flex: 2; 
     padding-right: 20px;
+    min-width: 0; /* FIX: Stops text blocks from pushing boundaries */
 }
 
 .split-text h3 {
@@ -225,12 +214,14 @@ body {
 }
 
 .split-media {
-    flex: 3; /* Tells the media to take up the other half */
+    flex: 3; 
     background: white;
     padding: 15px;
     border-radius: 8px;
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    min-width: 0; /* FIX: Forces the flex child to respect its container limit */
+    overflow: hidden; /* FIX: Stops massive images from breaking out of the box */
 }
 
 .media-label {
@@ -243,17 +234,19 @@ body {
 
 /* Global Media Image Class */
 .media-img {
-    width: 100%;
+    max-width: 100%; /* FIX: Changed from width:100% to max-width to keep it bounded */
+    height: auto;    /* FIX: Maintains correct aspect ratio */
     border-radius: 4px;
     margin-bottom: 10px;
     display: block;
+    object-fit: contain; /* FIX: Ensures the image never squishes or distorts */
 }
 
 /* Container for Landscape Poster (4:3 Ratio) */
 .pdf-wrapper-landscape {
     position: relative;
     width: 100%;
-    padding-top: 75%; /* This creates the 4x3 landscape shape (3/4 = 75%) */
+    padding-top: 75%; 
     overflow: hidden;
     border-radius: 4px;
     background: #f0f0f0;
@@ -264,7 +257,7 @@ body {
 .pdf-wrapper-portrait {
     position: relative;
     width: 100%;
-    padding-top: 141.4%; /* The exact ratio for A-series paper */
+    padding-top: 141.4%; 
     overflow: hidden;
     border-radius: 4px;
     background: #f0f0f0;
@@ -282,16 +275,14 @@ body {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 4px; /* Keeps the corners smooth inside the wrapper */
+    border-radius: 4px; 
 }
 
 /* --- 4. MOBILE RESPONSIVENESS (MUST BE AT THE VERY BOTTOM!) --- */
 
 @media (max-width: 768px) {
-    /* Show the hamburger icon */
     .menu-toggle { display: block; }
 
-    /* Transform the nav bar into a vertical drop-down menu */
     .nav-links {
         display: none; 
         flex-direction: column;
@@ -308,7 +299,6 @@ body {
     .nav-links.show { display: flex; }
     .nav-links li { text-align: center; padding: 10px 0; }
 
-    /* Make the dropdown menus flow naturally down the page */
     .dropdown-content {
         position: static; 
         display: none;
@@ -317,7 +307,6 @@ body {
         border-top: none;
     }
 
-    /* Override the Desktop Grid to stack on mobile */
     .bio-grid {
         grid-template-columns: 1fr; 
         text-align: center;
@@ -333,14 +322,9 @@ body {
         margin: 0 auto;
     }
 
-    .hero-quote {
-        font-size: 1.4rem; /* Shrink quote slightly for mobile */
-    }
+    .hero-quote { font-size: 1.4rem; }
     
-    /* Stack the news card on mobile */
-    .news-card {
-        flex-direction: column;
-    }
+    .news-card { flex-direction: column; }
     
     .news-img {
         width: 100%;
@@ -349,27 +333,16 @@ body {
         border-bottom: 1px solid #eee;
     }
 
-    /* Stack split cards on phones */
-    .split-card {
-        flex-direction: column;
-    }
+    .split-card { flex-direction: column; }
 
     .split-text {
         padding-right: 0;
         margin-bottom: 20px;
     }
 
-    .split-media {
-        width: 100%; /* Ensures the PDF takes up the full width of the phone */
-    }
+    .split-media { width: 100%; }
 
-    .pdf-wrapper-landscape {
-        padding-top: 0;
-        height: 300px; /* Gives it a solid presence on phones so it's not a tiny sliver */
-    }
-
-    .pdf-wrapper-portrait {
-        padding-top: 0;
-        height: 600px; /* Taller height so a vertical poster doesn't look tiny */
-    }
+    /* FIX: I removed the fixed height/padding overrides here. 
+       Now the wrappers will maintain their perfect aspect ratios 
+       on mobile, which stops the PDFs from being squished! */
 }
