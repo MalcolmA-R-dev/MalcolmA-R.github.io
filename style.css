@@ -204,7 +204,7 @@ body {
 }
 
 .split-text {
-    flex: 1; /* Tells the text to take up exactly half the space */
+    flex: 2; /* Tells the text to take up exactly half the space */
     padding-right: 20px;
 }
 
@@ -214,7 +214,7 @@ body {
 }
 
 .split-media {
-    flex: 1; /* Tells the media to take up the other half */
+    flex: 3; /* Tells the media to take up the other half */
     background: white;
     padding: 15px;
     border-radius: 8px;
