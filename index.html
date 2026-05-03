@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malcolm Albergo-Radisch | Portfolio</title>
+    <title>Malcolm Albergo-Radisch | BME Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,74 +13,148 @@
         <div class="profile-header">
             <h1>Malcolm A-R</h1>
             <p>Biomedical Engineering</p>
+            <p class="gpa-tag">GPA: 3.337</p>
         </div>
         
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
             
             <li class="dropdown">
                 <button class="dropbtn">Timeline Highlights ▼</button>
                 <div class="dropdown-content">
-                    <a href="#freshman">Freshman (2023-24)</a>
-                    <a href="#sophomore">Sophomore (2024-25)</a>
-                    <a href="#junior">Junior (2025-26)</a>
-                    <a href="#senior">Senior (Projected)</a>
+                    <a href="javascript:void(0)" onclick="showSection('freshman')">Freshman (2023-24)</a>
+                    <a href="javascript:void(0)" onclick="showSection('sophomore')">Sophomore (2024-25)</a>
+                    <a href="javascript:void(0)" onclick="showSection('junior')">Junior (2025-26)</a>
+                    <a href="javascript:void(0)" onclick="showSection('senior')">Senior (Projected)</a>
                 </div>
             </li>
 
             <li class="dropdown">
                 <button class="dropbtn">GCSP Components ▼</button>
                 <div class="dropdown-content">
-                    <a href="#talent">Talent</a>
-                    <a href="#interdisciplinary">Interdisciplinary</a>
-                    <a href="#entrepreneurship">Entrepreneurship</a>
-                    <a href="#multicultural">Multicultural</a>
-                    <a href="#social">Social Consciousness</a>
+                    <a href="javascript:void(0)" onclick="showSection('talent')">Talent</a>
+                    <a href="javascript:void(0)" onclick="showSection('interdisciplinary')">Interdisciplinary</a>
+                    <a href="javascript:void(0)" onclick="showSection('entrepreneurship')">Entrepreneurship</a>
+                    <a href="javascript:void(0)" onclick="showSection('multicultural')">Multicultural</a>
+                    <a href="javascript:void(0)" onclick="showSection('social')">Social Consciousness</a>
                 </div>
             </li>
 
-            <li><a href="#press">Press</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('press')">Press</a></li>
         </ul>
 
         <div class="sidebar-footer">
-            <a href="https://www.linkedin.com/in/malcolm-albergo-radisch/" target="_blank" class="linkedin-link">LinkedIn Profile</a>
+            <a href="YOUR_LINKEDIN_URL" target="_blank" class="linkedin-link">LinkedIn Profile</a>
         </div>
     </nav>
 
     <main class="content">
-        <section id="home" class="section">
+        <section id="home" class="page-section active">
             <blockquote class="hero-quote">
-                "Engineering better medicines to bridge the gap in global health."
+                "Engineering better medicines to bridge the gap in global health." [cite: 3]
             </blockquote>
             <div class="bio-box">
-                <img src="headshot.jpg" alt="Profile" class="profile-img">
+                <img src="headshot.jpg" alt="Malcolm A-R" class="profile-img">
                 <div class="bio-text">
-                    <p>I am a Biomedical Engineering major at NC State University[cite: 1, 2]. My focus is on Engineering Better Medicines under the Grand Challenges Scholars Program[cite: 3].</p>
+                    <p>I am a Biomedical Engineering major at NC State University[cite: 1, 2]. My focus is on the Grand Challenges Scholar Program (GCSP) health theme: <strong>Engineer Better Medicines</strong>[cite: 3].</p>
                     <div class="doc-links">
-                        <a href="Malcolm Albergo-Radisch Resume 4.16.2026.pdf" target="_blank" class="btn">View Resume</a>
-                        <a href="Malcolm Albergo-Radisch Resume 4.16.2026.pdf" target="_blank" class="btn">View CV</a>
+                        <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
+                        <a href="cv.pdf" target="_blank" class="btn">View CV</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="talent" class="section">
+        <section id="talent" class="page-section">
             <h2 class="section-title">GCSP: Talent</h2>
             <div class="card">
                 <h3>Undergraduate Research Fellow</h3>
-                <p>Piedrahita Lab (Summer 2025) - Focusing on Intervertebral disc morphogenesis.</p>
-                <p>Grand Challenges REU (2026) - Lung Fibrosis research.</p>
+                <p>Piedrahita Lab (Summer 2025). Investigating Intervertebral disc morphogenesis.</p>
+            </div>
+            <div class="card">
+                <h3>Grand Challenges REU</h3>
+                <p>Spring and Summer 2026. Researching Lung Fibrosis and LGR5 placement at Piedrahita Lab.</p>
             </div>
         </section>
 
-        <section id="press" class="section">
-            <h2 class="section-title">Press & Publications</h2>
+        <section id="interdisciplinary" class="page-section">
+            <h2 class="section-title">Interdisciplinary Curriculum</h2>
             <div class="card">
-                <a href="LINK_HERE" target="_blank">View Article: [Title of Article]</a>
-                <p>Published in [Source Name], 2025.</p>
+                <h3>University Honors Program</h3>
+                <p>Actively completing the University Honors Program requirements.</p>
+            </div>
+            <div class="card">
+                <h3>Minor in Teamwork</h3>
+                <p>Minor in Teamwork in Interdisciplinary Biomedical Research.</p>
             </div>
         </section>
+
+        <section id="entrepreneurship" class="page-section">
+            <h2 class="section-title">Entrepreneurship</h2>
+            <div class="card">
+                <h3>Albright Entrepreneurship Village (AEV)</h3>
+                <p>Serving as a Village Mentor and recipient of the Force Multiplier 2025 award.</p>
+            </div>
+            <div class="card">
+                <h3>VenturePack Challenge</h3>
+                <p>Finalist in the Spring 2025 VenturePack Challenge competition.</p>
+            </div>
+        </section>
+
+        <section id="multicultural" class="page-section">
+            <h2 class="section-title">Multicultural Competency</h2>
+            <div class="card">
+                <h3>International Education</h3>
+                <p>Study abroad in Barranquilla, Colombia (Summer 2024), focusing on Engineering Economics.</p>
+            </div>
+            <div class="card">
+                <h3>GCSP Annual Meeting</h3>
+                <p>Projected attendance at the 2026 Annual Meeting in Rome, Italy.</p>
+            </div>
+        </section>
+
+        <section id="social" class="page-section">
+            <h2 class="section-title">Social Consciousness</h2>
+            <div class="card">
+                <h3>Museum of Life and Science</h3>
+                <p>Dedicated three years to the education department of this Durham-based non-profit.</p>
+            </div>
+            <div class="card">
+                <h3>Social Innovation Fellows</h3>
+                <p>Participating in alternative service break projects and social innovation initiatives.</p>
+            </div>
+        </section>
+
+        <section id="press" class="page-section">
+            <h2 class="section-title">Press</h2>
+            <div class="card">
+                <p>Coming soon: Articles and publications highlighting research and advocacy work.</p>
+            </div>
+        </section>
+
+        <section id="freshman" class="page-section"><h2>Freshman Highlights</h2><p>Content for 2023-24 school year.</p></section>
+        <section id="sophomore" class="page-section"><h2>Sophomore Highlights</h2><p>Content for 2024-25 school year.</p></section>
+        <section id="junior" class="page-section"><h2>Junior Highlights</h2><p>Content for 2025-26 school year.</p></section>
+        <section id="senior" class="page-section"><h2>Senior Highlights</h2><p>Projected goals and senior thesis plan.</p></section>
+
     </main>
 
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+
+            // Optional: Close dropdowns after clicking on mobile
+        }
+    </script>
 </body>
 </html>
