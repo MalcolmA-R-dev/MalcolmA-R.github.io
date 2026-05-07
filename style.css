@@ -37,6 +37,17 @@ body {
     padding: 15px 20px;
 }
 
+.name-link {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Keeps the color the same as your surrounding text */
+    cursor: pointer;      /* Ensures the mouse turns into a "hand" icon on hover */
+}
+
+.name-link:hover {
+    color: var(--ncstate-red); /* Optional: adds a subtle color change when hovered */
+    transition: 0.3s;
+}
+
 .logo .name { font-weight: 700; font-size: 1.2rem; display: block; color: var(--ncstate-red); }
 .logo .major { font-size: 0.75rem; opacity: 0.7; }
 
