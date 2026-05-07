@@ -278,6 +278,25 @@ body {
     border-radius: 4px; 
 }
 
+/* Container for side-by-side images */
+.media-grid-half {
+    display: flex;
+    gap: 10px; /* Space between the two images */
+    width: 100%;
+}
+
+/* Specific styling for the portrait images */
+.media-img-portrait {
+    flex: 1; /* Makes both images take up 50% of the space */
+    width: 50%; 
+    height: auto;
+    aspect-ratio: 2 / 3; /* Forces a consistent portrait shape */
+    object-fit: cover; /* Ensures the image fills the box without stretching */
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+
 /* --- 4. MOBILE RESPONSIVENESS (MUST BE AT THE VERY BOTTOM!) --- */
 
 @media (max-width: 768px) {
@@ -345,4 +364,8 @@ body {
     /* FIX: I removed the fixed height/padding overrides here. 
        Now the wrappers will maintain their perfect aspect ratios 
        on mobile, which stops the PDFs from being squished! */
+    .media-grid-half {
+        flex-direction: row; /* Keep them side-by-side even on mobile */
+        /* OR change to column if they get too small */
+    }
 }
