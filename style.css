@@ -37,23 +37,28 @@ body {
     padding: 15px 20px;
 }
 
-/* Target the link specifically */
+/* 1. Reset the link to look like your original header text */
 .name-link {
-    text-decoration: none !important; /* Forces underline to disappear */
-    color: inherit !important;        /* Forces it to take the color of the parent div */
-    outline: none;                   /* Removes the focus box when clicked */
+    text-decoration: none !important; /* Kills the underline */
+    color: var(--ncstate-red) !important; /* Forces your signature NC State Red */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Makes the color fade smoothly */
 }
 
-/* Ensure it doesn't turn purple after you click it */
+/* 2. Ensure it stays red even after you've clicked it once */
 .name-link:visited {
-    color: inherit !important;
+    color: var(--ncstate-red) !important;
+}
+
+/* 3. The Hover Effect: Turns white when mouse is over it */
+.name-link:hover {
+    color: #ffffff !important; /* Turns white */
     text-decoration: none !important;
 }
 
-/* Optional: a very subtle change so people know it's a button */
-.name-link:hover {
-    opacity: 0.8; 
-    text-decoration: none !important;
+/* 4. Remove the default blue glow some browsers add when clicking */
+.name-link:focus {
+    outline: none;
 }
 
 .logo .name { font-weight: 700; font-size: 1.2rem; display: block; color: var(--ncstate-red); }
