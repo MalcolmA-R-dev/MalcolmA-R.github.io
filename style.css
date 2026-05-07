@@ -37,15 +37,23 @@ body {
     padding: 15px 20px;
 }
 
+/* Target the link specifically */
 .name-link {
-    text-decoration: none; /* Removes the underline */
-    color: inherit;        /* Keeps the color the same as your surrounding text */
-    cursor: pointer;      /* Ensures the mouse turns into a "hand" icon on hover */
+    text-decoration: none !important; /* Forces underline to disappear */
+    color: inherit !important;        /* Forces it to take the color of the parent div */
+    outline: none;                   /* Removes the focus box when clicked */
 }
 
+/* Ensure it doesn't turn purple after you click it */
+.name-link:visited {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* Optional: a very subtle change so people know it's a button */
 .name-link:hover {
-    color: var(--ncstate-red); /* Optional: adds a subtle color change when hovered */
-    transition: 0.3s;
+    opacity: 0.8; 
+    text-decoration: none !important;
 }
 
 .logo .name { font-weight: 700; font-size: 1.2rem; display: block; color: var(--ncstate-red); }
