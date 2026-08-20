@@ -48,42 +48,75 @@
     </nav>
 
     <main class="content">
-        <section id="home" class="page-section active">
-            <blockquote class="hero-quote">
-                "Community may be the most important thing you ever build, so start with a strong foundation."
-            </blockquote>
-            <div class="bio-grid">
-                <div class="bio-text">
-                    <p>I am a Biomedical Engineering student at NC State University with specialization areas of Regenerative Medicine and Biosignals and Imaging. And a minor in Teamwork in Interdisciplinary Biomedical Research. My work focuses on the Grand Challenges Scholars Program (GCSP) health theme: <strong>Engineer Better Medicines</strong>. My time at NCSU is best defined by Research, Entrepreneurship, and Community Building.</p>
-                <div class="bio-image">
-                    <img src="Poster 2026-04-29 083849.jpg" alt="Malcolm A-R" class="profile-img">
-                    <p class="gpa-text">OUR Spring 2026 Research & Creativity Symposium</p>
-                </div>
-                    <div class="pdf-container">
-                        <p><strong>Resume</strong></p>
-                        <div class="pdf-wrapper-portrait">
-                            <embed src="Malcolm Albergo-Radisch Resume 8.20.2026.pdf#navpanes=0&toolbar=1&view=FitH" type="application/pdf" />
-                        </div>
-                        <div class="pdf-fallback">
-                            <a href="Malcolm Albergo-Radisch Resume 8.16.2026.pdf" target="_blank" class="btn">Open in New Tab</a>
-                        </div>
-                    </div>               
-                </div>
-                <div class="bio-image">
-                    <img src="IMG_0112.png" alt="Malcolm A-R Sunny" class="profile-img">
-                    <p class="gpa-text">Malcolm Albergo-Radisch on a Sunny Day</p>
-                </div>
-                <div class="bio-image">
-                    <img src="Malcolm_Rain.jpg" alt="Malcolm A-R Rainy" class="profile-img">
-                    <p class="gpa-text">Malcolm Albergo-Radisch on a Rainy Day</p>
-                </div>
-                
-            </div>
+<section id="home" class="page-section active">
+    
+    <!-- 1. HERO QUOTE -->
+    <blockquote class="hero-quote centered-quote">
+        "Community may be the most important thing you ever build, so start with a strong foundation."
+    </blockquote>
+
+    <!-- MAIN HOME CARD -->
+    <div class="card center-content">
+        
+        <!-- 2. SINGLE FEATURED IMAGE (Symposium Poster) -->
+        <img src="Poster 2026-04-29 083849.jpg" alt="OUR Spring 2026 Research & Creativity Symposium" class="main-featured-img">
+        <p class="gpa-text" style="margin-top: -15px; margin-bottom: 25px;">OUR Spring 2026 Research & Creativity Symposium</p>
+
+        <!-- 3. INTRODUCTION PARAGRAPH -->
+        <h3>Malcolm Albergo-Radisch</h3>
+        <p class="year-label">Biomedical Engineering | NC State University</p>
+        
+        <p class="intro-paragraph">
+            I am a Biomedical Engineering student at NC State University with specialization areas of Regenerative Medicine and Biosignals and Imaging, and a minor in Teamwork in Interdisciplinary Biomedical Research.
+        </p>
+        
+        <p class="intro-paragraph">
+            My work focuses on the Grand Challenges Scholars Program (GCSP) health theme: <strong>Engineer Better Medicines</strong>. My time at NCSU is best defined by Research, Entrepreneurship, and Community Building.
+        </p>
+
+        <!-- 4. TWO PROFILE IMAGES SIDE-BY-SIDE (Sunny & Rainy) -->
+        <div class="media-grid-half photo-margin">
+            <img src="IMG_0112.png" alt="Malcolm A-R Sunny" class="media-img-portrait">
+            <img src="Malcolm_Rain.jpg" alt="Malcolm A-R Rainy" class="media-img-portrait">
+        </div>
+        <p class="gpa-text" style="margin-bottom: 30px;">Malcolm on a Sunny Day (Left) vs. a Rainy Day (Right)</p>
+
+        <!-- 5. TWO PDFs SIDE-BY-SIDE (Resume & CV) -->
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; text-align: left;">
             
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/malcolm-albergo-radisch/" target="_blank" class="btn">LinkedIn Profile</a>
+            <!-- RESUME CONTAINER -->
+            <div class="pdf-container" style="flex: 1; min-width: 250px; margin-top: 0;">
+                <p><strong>Resume</strong></p>
+                <div class="pdf-wrapper-portrait">
+                    <embed src="Malcolm Albergo-Radisch Resume 8.20.2026.pdf#navpanes=0&toolbar=1&view=FitH" type="application/pdf" />
+                </div>
+                <div class="pdf-fallback">
+                    <a href="Malcolm Albergo-Radisch Resume 8.20.2026.pdf" target="_blank" class="btn">Open Resume</a>
+                </div>
             </div>
-        </section>
+
+            <!-- CV CONTAINER (Using Resume PDF as placeholder) -->
+            <div class="pdf-container" style="flex: 1; min-width: 250px; margin-top: 0;">
+                <p><strong>Curriculum Vitae</strong></p>
+                <div class="pdf-wrapper-portrait">
+                    <!-- CHANGE THIS SRC TO YOUR ACTUAL CV PDF -->
+                    <embed src="Malcolm Albergo-Radisch Resume 8.20.2026.pdf#navpanes=0&toolbar=1&view=FitH" type="application/pdf" />
+                </div>
+                <div class="pdf-fallback">
+                    <!-- CHANGE THIS HREF TO YOUR ACTUAL CV PDF -->
+                    <a href="Malcolm Albergo-Radisch Resume 8.20.2026.pdf" target="_blank" class="btn" style="background: var(--dark);">Open CV</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 6. FOOTER SOCIAL -->
+    <div class="footer-social" style="text-align: center;">
+        <a href="https://www.linkedin.com/in/malcolm-albergo-radisch/" target="_blank" class="btn linkedin-btn">LinkedIn Profile</a>
+    </div>
+
+</section>
 
         <section id="talent" class="page-section">
             <h2 class="section-title">Talent</h2>
