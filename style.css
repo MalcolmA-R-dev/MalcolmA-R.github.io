@@ -1,6 +1,6 @@
 /* --- 1. VARIABLES & RESET --- */
 * {
-    box-sizing: border-box; /* This stops elements from stretching past the screen edge! */
+    box-sizing: border-box; 
 }
 
 :root {
@@ -37,26 +37,20 @@ body {
     padding: 15px 20px;
 }
 
-/* 1. Reset the link to look like your original header text */
+/* Home Link (Name) Styling */
 .name-link {
-    text-decoration: none !important; /* Kills the underline */
-    color: var(--ncstate-red) !important; /* Forces your signature NC State Red */
+    text-decoration: none !important; 
+    color: var(--ncstate-red) !important; 
     cursor: pointer;
-    transition: color 0.3s ease; /* Makes the color fade smoothly */
+    transition: color 0.3s ease; 
 }
-
-/* 2. Ensure it stays red even after you've clicked it once */
 .name-link:visited {
     color: var(--ncstate-red) !important;
 }
-
-/* 3. The Hover Effect: Turns white when mouse is over it */
 .name-link:hover {
-    color: #ffffff !important; /* Turns white */
+    color: #ffffff !important; 
     text-decoration: none !important;
 }
-
-/* 4. Remove the default blue glow some browsers add when clicking */
 .name-link:focus {
     outline: none;
 }
@@ -111,218 +105,68 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Sections & Cards */
-.hero-quote { font-size: 1.8rem; font-style: italic; border-left: 5px solid var(--ncstate-red); padding-left: 20px; margin-bottom: 40px; }
-.bio-grid { display: grid; grid-template-columns: 1fr 200px; gap: 40px; }
-.profile-img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #ddd; object-fit: cover; }
-.gpa-text { text-align: center; font-size: 0.8rem; margin-top: 10px; font-weight: bold; }
+/* General Cards & Buttons */
 .card { background: var(--light-grey); padding: 25px; border-radius: 8px; margin-bottom: 20px; }
-.btn { background: var(--ncstate-red); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 10px; }
+.btn { background: var(--ncstate-red); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 10px; transition: opacity 0.2s; }
+.btn:hover { opacity: 0.85; }
 .footer-social { margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; }
 
+/* --- HOMEPAGE SPECIFIC LAYOUTS --- */
+.hero-quote { font-size: 1.8rem; font-style: italic; border-left: 5px solid var(--ncstate-red); padding-left: 20px; margin-bottom: 40px; }
+.centered-quote { text-align: center; border-left: none; border-bottom: 4px solid var(--ncstate-red); padding-left: 0; padding-bottom: 15px; }
+.center-content { text-align: center; }
+.main-featured-img { max-height: 400px; max-width: 100%; object-fit: contain; margin: 0 auto 25px auto; border-radius: 8px; display: block; }
+.intro-paragraph { max-width: 700px; margin: 0 auto 15px auto; line-height: 1.6; }
+.intro-list { display: inline-block; text-align: left; margin: 10px auto 25px auto; line-height: 1.6; }
+.photo-margin { margin: 30px 0 10px 0; }
+.gpa-text { text-align: center; font-size: 0.8rem; margin-top: 10px; font-weight: bold; }
+.action-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+.linkedin-btn { background: #0077b5; } /* LinkedIn Blue */
+
 /* PDF Viewer Styling */
-.pdf-container {
-    margin-top: 20px;
-    padding: 15px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
+.pdf-container { margin-top: 20px; padding: 15px; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 .pdf-container p { font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; color: var(--ncstate-red); }
 .pdf-fallback { margin-top: 10px; text-align: center; }
 
-/* --- RESPONSIVE VIDEO CONTAINERS --- */
-.video-container {
-    position: relative;
-    width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-top: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+/* Responsive Video Containers */
+.video-container { position: relative; width: 100%; border-radius: 8px; overflow: hidden; margin-top: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.video-container.youtube { padding-bottom: 56.25%; max-width: 800px; margin: 0 auto; }
+.video-container.youtube-short { padding-bottom: 177.77%; max-width: 350px; margin: 0 auto; }
+.video-container.linkedin { padding-bottom: 0; max-width: 504px; margin: 0 auto; background: transparent; box-shadow: none; }
+.video-container.youtube iframe, .video-container.youtube-short iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-.video-container.youtube {
-    padding-bottom: 56.25%; 
-    max-width: 800px; 
-    margin: 0 auto;   
-}
-
-.video-container.youtube-short {
-    padding-bottom: 177.77%; 
-    max-width: 350px; 
-    margin: 0 auto; 
-}
-
-.video-container.linkedin {
-    padding-bottom: 0; 
-    max-width: 504px; 
-    margin: 0 auto; 
-    background: transparent;
-    box-shadow: none; 
-}
-
-.video-container.youtube iframe,
-.video-container.youtube-short iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* --- PRESS / NEWS CARDS --- */
-.news-card {
-    display: flex;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.news-img {
-    width: 250px;
-    flex-shrink: 0; /* Prevents flexbox from squishing the image width */
-    height: auto;
-    object-fit: cover; 
-    border-right: 1px solid #eee;
-}
-
-.news-content {
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.news-content h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.2rem;
-}
-
-.news-content a {
-    color: var(--ncstate-red);
-    text-decoration: none;
-}
-
-.news-content a:hover {
-    text-decoration: underline;
-}
-
+/* Press / News Cards */
+.news-card { display: flex; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.news-card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+.news-img { width: 250px; flex-shrink: 0; height: auto; object-fit: cover; border-right: 1px solid #eee; }
+.news-content { padding: 20px; flex-grow: 1; }
+.news-content h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
+.news-content a { color: var(--ncstate-red); text-decoration: none; }
+.news-content a:hover { text-decoration: underline; }
 .news-meta { font-size: 0.8rem; color: #666; margin-bottom: 10px; }
 .news-snippet { font-size: 0.9rem; color: #444; margin: 0; }
 
-/* --- SPLIT CARDS (Side-by-Side Layout) --- */
-.split-card {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start; 
-}
+/* Split Cards (Side-by-Side Layout) */
+.split-card { display: flex; gap: 30px; align-items: flex-start; }
+.split-text { flex: 2; padding-right: 20px; min-width: 0; text-align: left; }
+.split-text h3 { margin-top: 0; color: var(--ncstate-red); }
+.split-media { flex: 3; background: white; padding: 15px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05); min-width: 0; overflow: hidden; }
+.media-label { font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; color: #666; text-transform: uppercase; display: block; }
 
-.split-text {
-    flex: 2; 
-    padding-right: 20px;
-    min-width: 0; /* FIX: Stops text blocks from pushing boundaries */
-}
+/* Global Media Image Classes */
+.media-img { max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 10px; display: block; object-fit: contain; }
 
-.split-text h3 {
-    margin-top: 0;
-    color: var(--ncstate-red);
-}
+/* Container for Side-by-Side Portrait Images */
+.media-grid-half { display: flex; gap: 10px; width: 100%; }
+.media-img-portrait { flex: 1; width: 50%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 4px; border: 1px solid #eee; }
 
-.split-media {
-    flex: 3; 
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    min-width: 0; /* FIX: Forces the flex child to respect its container limit */
-    overflow: hidden; /* FIX: Stops massive images from breaking out of the box */
-}
-
-.media-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #666;
-    text-transform: uppercase;
-}
-
-/* Global Media Image Class */
-.media-img {
-    max-width: 100%; /* FIX: Changed from width:100% to max-width to keep it bounded */
-    height: auto;    /* FIX: Maintains correct aspect ratio */
-    border-radius: 4px;
-    margin-bottom: 10px;
-    display: block;
-    object-fit: contain; /* FIX: Ensures the image never squishes or distorts */
-}
-
-/* Container for Landscape Poster (4:3 Ratio) */
-.pdf-wrapper-landscape {
-    position: relative;
-    width: 100%;
-    padding-top: 75%; 
-    overflow: hidden;
-    border-radius: 4px;
-    background: #f0f0f0;
-    border: 1px solid #eee;
-}
-
-/* Container for A1 Portrait Poster (1:1.41 Ratio) */
-.pdf-wrapper-portrait {
-    position: relative;
-    width: 100%;
-    padding-top: 141.4%; 
-    overflow: hidden;
-    border-radius: 4px;
-    background: #f0f0f0;
-    border: 1px solid #eee;
-}
-
-/* Combined absolute positioning for all PDF wrappers */
-.pdf-wrapper-landscape embed, 
-.pdf-wrapper-landscape iframe,
-.pdf-wrapper-portrait embed, 
-.pdf-wrapper-portrait iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 4px; 
-}
-
-/* Container for side-by-side images */
-.media-grid-half {
-    display: flex;
-    gap: 10px; /* Space between the two images */
-    width: 100%;
-}
-
-/* Specific styling for the portrait images */
-.media-img-portrait {
-    flex: 1; /* Makes both images take up 50% of the space */
-    width: 50%; 
-    height: auto;
-    aspect-ratio: 2 / 3; /* Forces a consistent portrait shape */
-    object-fit: cover; /* Ensures the image fills the box without stretching */
-    border-radius: 4px;
-    border: 1px solid #eee;
-}
+/* Containers for Poster Embeds */
+.pdf-wrapper-landscape { position: relative; width: 100%; padding-top: 75%; overflow: hidden; border-radius: 4px; background: #f0f0f0; border: 1px solid #eee; }
+.pdf-wrapper-portrait { position: relative; width: 100%; padding-top: 141.4%; overflow: hidden; border-radius: 4px; background: #f0f0f0; border: 1px solid #eee; }
+.pdf-wrapper-landscape embed, .pdf-wrapper-landscape iframe, .pdf-wrapper-portrait embed, .pdf-wrapper-portrait iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 4px; }
 
 
-/* --- 4. MOBILE RESPONSIVENESS (MUST BE AT THE VERY BOTTOM!) --- */
-
+/* --- 4. MOBILE RESPONSIVENESS (MUST BE AT THE VERY BOTTOM) --- */
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
 
@@ -338,7 +182,6 @@ body {
         gap: 10px;
         box-shadow: 0 10px 10px rgba(0,0,0,0.2);
     }
-
     .nav-links.show { display: flex; }
     .nav-links li { text-align: center; padding: 10px 0; }
 
@@ -350,46 +193,19 @@ body {
         border-top: none;
     }
 
-    .bio-grid {
-        grid-template-columns: 1fr; 
-        text-align: center;
-    }
-
-    .bio-image {
-        order: -1; 
-        margin-bottom: 20px;
-    }
-
-    .profile-img {
-        max-width: 200px; 
-        margin: 0 auto;
-    }
-
     .hero-quote { font-size: 1.4rem; }
     
+    /* Stack components vertically on mobile */
     .news-card { flex-direction: column; }
-    
-    .news-img {
-        width: 100%;
-        height: 200px;
-        border-right: none;
-        border-bottom: 1px solid #eee;
-    }
+    .news-img { width: 100%; height: 200px; border-right: none; border-bottom: 1px solid #eee; }
 
     .split-card { flex-direction: column; }
-
-    .split-text {
-        padding-right: 0;
-        margin-bottom: 20px;
-    }
-
+    .split-text { padding-right: 0; margin-bottom: 20px; }
     .split-media { width: 100%; }
 
-    /* FIX: I removed the fixed height/padding overrides here. 
-       Now the wrappers will maintain their perfect aspect ratios 
-       on mobile, which stops the PDFs from being squished! */
-    .media-grid-half {
-        flex-direction: row; /* Keep them side-by-side even on mobile */
-        /* OR change to column if they get too small */
-    }
+    /* Keeps 50/50 images side-by-side even on small screens */
+    .media-grid-half { flex-direction: row; } 
+    
+    /* Ensure the intro list scales down cleanly */
+    .intro-list { max-width: 100%; padding-left: 20px; }
 }
