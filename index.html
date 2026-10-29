@@ -11,43 +11,45 @@
 <body>
 
 <nav class="topbar">
-        <div class="nav-container">
-<div class="logo">
-    <a href="index.html" class="name-link">Malcolm Albergo-Radisch</a>
-</div>
-            
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
-                
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Timeline ▼</a>
-                    <div class="dropdown-content">
-                        <a href="javascript:void(0)" onclick="showSection('year2027')">2027 (Projected)</a>
-                        <a href="javascript:void(0)" onclick="showSection('year2026')">2026</a>
-                        <a href="javascript:void(0)" onclick="showSection('year2025')">2025</a>
-                        <a href="javascript:void(0)" onclick="showSection('year2024')">2024</a>
-                        <a href="javascript:void(0)" onclick="showSection('year2023')">2023</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">GCSP Competencies ▼</a>
-                    <div class="dropdown-content">
-                        <a href="javascript:void(0)" onclick="showSection('talent')">Talent</a>
-                        <a href="javascript:void(0)" onclick="showSection('interdisciplinary')">Interdisciplinary</a>
-                        <a href="javascript:void(0)" onclick="showSection('entrepreneurship')">Entrepreneurship</a>
-                        <a href="javascript:void(0)" onclick="showSection('multicultural')">Multicultural</a>
-                        <a href="javascript:void(0)" onclick="showSection('social')">SocialConsciousness</a>
-                    </div>
-                </li>
-
-                <li><a href="javascript:void(0)" onclick="showSection('press')">Press</a></li>
-            </ul>
+    <div class="nav-container">
+        <div class="logo">
+            <!-- FIXED LOGO: Removed index.html reload, added showSection('home') -->
+            <a onclick="showSection('home')" class="name-link" style="cursor: pointer;">Malcolm Albergo-Radisch</a>
         </div>
-    </nav>
+            
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            
+        <ul class="nav-links" id="navLinks">
+            <!-- FIXED LINKS: Removed href="javascript:void(0)", added cursor: pointer -->
+            <li><a onclick="showSection('home')" style="cursor: pointer;">Home</a></li>
+                
+            <li class="dropdown">
+                <a class="dropbtn" style="cursor: pointer;">Timeline ▼</a>
+                <div class="dropdown-content">
+                    <a onclick="showSection('year2027')" style="cursor: pointer;">2027 (Projected)</a>
+                    <a onclick="showSection('year2026')" style="cursor: pointer;">2026</a>
+                    <a onclick="showSection('year2025')" style="cursor: pointer;">2025</a>
+                    <a onclick="showSection('year2024')" style="cursor: pointer;">2024</a>
+                    <a onclick="showSection('year2023')" style="cursor: pointer;">2023</a>
+                </div>
+            </li>
 
+            <li class="dropdown">
+                <a class="dropbtn" style="cursor: pointer;">GCSP Competencies ▼</a>
+                <div class="dropdown-content">
+                    <a onclick="showSection('talent')" style="cursor: pointer;">Talent</a>
+                    <a onclick="showSection('interdisciplinary')" style="cursor: pointer;">Interdisciplinary</a>
+                    <a onclick="showSection('entrepreneurship')" style="cursor: pointer;">Entrepreneurship</a>
+                    <a onclick="showSection('multicultural')" style="cursor: pointer;">Multicultural</a>
+                    <a onclick="showSection('social')" style="cursor: pointer;">SocialConsciousness</a>
+                </div>
+            </li>
+
+            <li><a onclick="showSection('press')" style="cursor: pointer;">Press</a></li>
+        </ul>
+    </div>
+</nav>
+    
     <main class="content">
 <section id="home" class="page-section active">
     
